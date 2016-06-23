@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="jquery-1.12.3.min.js"></script>
+		<style>
+			/*#div1 {
+				width: 300px;
+			}*/
+			
+			#slidCity {
+				width: 100px;
+				height: 30px;
+				background-color: deeppink;
+			}
+			
+			#a1 {
+				line-height: 30px;
+			}
+			
+			#city {
+				width: 300px;
+				height: 300px;
+				border: 1px solid black;
+				display: none;
+			}
+			
+			#city a {
+				float: left;
+				margin-left: 20px;
+				margin-top: 20px;
+				cursor: pointer;
+			}
+			#city a:hover{
+				color: red;
+				background-color: lawngreen;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--<div id="div1">-->
+			<div id="slidCity"><a id="a1">送至到:北京</a></div>
+			<div id="city">
+				<a>北京</a><a>天津</a><a>北京</a><a>天津</a>
+				<a>北京</a><a>天津</a><a>北京</a><a>天津</a>
+				<a>北京</a><a>天津</a><a>北京</a><a>天津</a>
+				<a>北京</a><a>天津</a><a>北京</a><a>天津</a>
+				<a>北京</a><a>天津</a><a>北京</a><a>天津</a>
+				<a>北京</a><a>天津</a><a>北京</a><a>天津</a>
+				<a>北京</a><a>天津</a><a>北京</a><a>天津</a>
+				<a>北京</a><a>天津</a><a>北京</a><a>天津</a>
+				<a>北京</a><a>天津</a><a>北京</a>
+			</div>
+		
+
+		<script>
+			$("#slidCity").bind("mouseover",function(){
+				$("#city").slideToggle();
+			})
+//			$("#slidCity").bind("mouseout",function(){
+//				$("#city").slideUp();
+//			})
+			
+		</script>
+	</body>
+
+</html>

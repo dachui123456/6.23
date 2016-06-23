@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="jquery-1.12.3.min.js"></script>
+		<style>
+			#div1 {
+				width: 200px;
+				height: 50px;
+				margin: 0 auto;
+				margin-top: 50px;
+				/*position: relative;*/
+			}
+			#btn1,#btn2{
+				position: relative;
+			}
+			#div2 {
+				width: 300px;
+				height: 300px;
+				border: 2px solid black;
+				background-color: slategray;
+				position: absolute;
+				left: 500px;
+				top: -400px;
+			}
+			span{
+				display: block;
+				width: 20px;
+				height: 20px;
+				border-radius: 10px;
+				text-align: center;
+				line-height: 20px;
+				background: pink;
+				position: absolute;
+				top: 0;
+				right: 0;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="div1">
+			<button id="btn1">显示</button>
+			<button id="btn2">折叠</button>
+		</div>
+
+		<div id="div2"><span>x</span></div>
+
+		<script>
+			$("#btn1").click(function() {
+				$("#div2").animate({
+					top: "100px",
+					opacity:0.5
+				},1000)
+			})
+			$("#btn2").click(function(){
+				$("#div2").slideUp(1000,function(){
+					$("#div2").animate({top: "-400px"},function(){
+						$("#div2").slideDown()
+					})
+				})
+			})
+			$("span").click(function(){
+				$("#div2").slideUp(1000,function(){
+					$("#div2").animate({top: "-400px"},function(){
+						$("#div2").slideDown()
+					})
+				})
+			})
+		</script>
+	</body>
+
+</html>
